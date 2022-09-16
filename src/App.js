@@ -1,25 +1,17 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+import ReturnPayPal from './components/ReturnPayPal';
+import CancelPayPal from './components/CancelPayPal';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Routes>
+				<Route path='/woozeee-paypal-return' element={<ReturnPayPal />} />
+				<Route path='/woozeee-paypal-cancel' element={<CancelPayPal />} />
+			</Routes>
+		</>
+	);
 }
 
 export default App;
